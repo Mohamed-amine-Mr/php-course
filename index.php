@@ -25,3 +25,7 @@ echo "<br>";
 
 // Output a string concatenated with the value of $med (which is "amine")
 echo "last name is ", $amine;
+echo "<br>";
+echo "Hello ${$a}"; // $$a
+echo "<br>";
+echo "Hello ${$$a}"; // $$$a
