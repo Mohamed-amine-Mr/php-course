@@ -1,35 +1,35 @@
 <?php
 
 /*
-    Operators
-    - Used To Perform Operations On Values.
+    Control Structure
+    - If, Elseif, Else <= Basics
 
-    Error Control Operator
-    - Control The Errors
-
-    @
-    - Variable
-    - File
-    - Include
+    Syntax
+    if (Condition) {
+      // If Condition Is True <= Run Me
+    } else {
+      // If Condition Is False <= Run Me
+    }
   */
-// Variable
+$page = "About";
+if ($page == "About") {
+  // echo "This Is The Page";
+}
+echo "<br>";
+$title = "";
+if ($title == "") {
+  // echo "Unknown Page";
+} else {
+  // echo $title;
+}
 
-// ay haja tketbat baad die("") makat9rach
-$a = 10;
-$b = @$a or die("var not found");
-echo $b;
-echo "Test $b";
-echo '<br>';
+$lang = "Spanish";
 
-// File (read file into array so output when u read file is array so use print_r not echo) 
-echo "<pre>";
-// $f = file("./amine.txt");
-$f = @file("./amine.txt") or die("file amine not exist"); // try wrong src apply error control 
-echo "</pre>";
-print_r($f);
-// Include
-echo '<br>';
-echo '<br>';
-// include("./amine.php");
-// to add or die u should wrap the include inside ()
-(@include("./amine_data.php")) or die("the file amine_data not exist");// try wrong src file to handle err
+if ($lang == "Arabic") {
+  echo " سلام";
+} elseif ($lang == "English") {
+  echo " Hello user";
+} elseif ($lang == "Spanish") {
+
+  echo "Hola Amigo";
+} else echo "Uknown language";
