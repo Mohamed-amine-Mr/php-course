@@ -1,35 +1,40 @@
 <?php
 
-/*
-    Control Structure
-    - If, Elseif, Else <= Basics
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    Syntax
-    if (Condition) {
-      // If Condition Is True <= Run Me
-    } else {
-      // If Condition Is False <= Run Me
-    }
-  */
-$page = "About";
-if ($page == "About") {
-  // echo "This Is The Page";
-}
-echo "<br>";
-$title = "";
-if ($title == "") {
-  // echo "Unknown Page";
-} else {
-  // echo $title;
+  if ($_POST["lang"] == "ar") {
+    header(header: "Location:ar.php");
+    exit();
+  } elseif ($_POST["lang"] == "en") {
+    header(header: "Location:en.php");
+    exit();
+  } elseif ($_POST["lang"] == "es") {
+    header(header: "Location:sp.php");
+    exit();
+  }
 }
 
-$lang = "Spanish";
+?>
 
-if ($lang == "Arabic") {
-  echo " سلام";
-} elseif ($lang == "English") {
-  echo " Hello user";
-} elseif ($lang == "Spanish") {
+<!DOCTYPE html>
+<html lang="en">
 
-  echo "Hola Amigo";
-} else echo "Uknown language";
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="" method="POST">
+    <input type="text" name="username">
+    <select name="lang">
+      <option value="ar">Arabic</option>
+      <option value="en">English</option>
+      <option value="es">Spanish</option>
+    </select>
+    <input type="submit" value="Go">
+  </form>
+</body>
+
+</html>
