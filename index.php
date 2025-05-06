@@ -4,38 +4,32 @@
     Operators
     - Used To Perform Operations On Values.
 
-    Array Operators
-    - Deal With Arrays
+    Error Control Operator
+    - Control The Errors
 
-    +     => Union
-    ==    => Equal => Same Key And Value
-    !=    => Not Equal
-    <>    => Not Equal
-    ===   => Identical => Same Key And Value, Same Order, Same Type
-    !==   => Not Identical
+    @
+    - Variable
+    - File
+    - Include
   */
+// Variable
 
-$arr1 = [1 => "A", 2 => "B"];
-$arr2 = [3 => "C", 4 => "D"];
-$arr3 = $arr1 + $arr2;
-
-echo '<pre>';
-print_r($arr1 + $arr2);
-print_r($arr3);
-echo '</pre>';
-
-$arr4 = [1 => "10", 2 => "20"];
-$arr5 = [2 => 20, 1 => 10];
-
-var_dump($arr4 == $arr5); // True 
-echo '<br>';
-var_dump($arr4 != $arr5); // False // bc its true == only check Same Key And Value 
-echo '<br>';
-var_dump($arr4 <> $arr5); // False 
+// ay haja tketbat baad die("") makat9rach
+$a = 10;
+$b = @$a or die("var not found");
+echo $b;
+echo "Test $b";
 echo '<br>';
 
-$arr6 = [1 => 100, 2 => 200];
-$arr7 = [1 => 100, 2 => 200];
-
-var_dump($arr6 === $arr7); // Give Me True bc same order same type same key value
-var_dump($arr4 === $arr5);// fasle , bc not same order
+// File (read file into array so output when u read file is array so use print_r not echo) 
+echo "<pre>";
+// $f = file("./amine.txt");
+$f = @file("./amine.txt") or die("file amine not exist"); // try wrong src apply error control 
+echo "</pre>";
+print_r($f);
+// Include
+echo '<br>';
+echo '<br>';
+// include("./amine.php");
+// to add or die u should wrap the include inside ()
+(@include("./amine_data.php")) or die("the file amine_data not exist");// try wrong src file to handle err
