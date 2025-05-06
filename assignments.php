@@ -1,6 +1,6 @@
 <!-- إستخدم ما تعلمته في المتغيرات لنستطيع تغيير جملة Elzero Courses بسهولة مستقبلا
  -->
-<?php $name = "Elzero Courses" ?>
+<!-- <?php $name = "Elzero Courses" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,4 +20,68 @@
     <footer>All Right Reserved To <?php echo $name ?></footer>
 </body>
 
-</html>
+</html> -->
+
+
+
+<?php
+// $name = "elzero";
+// $$name = "Web";
+
+// echo $$name;
+// echo $elzero;
+// echo "${elzero}";
+// echo "${$name}";
+// echo $elzero;
+
+// $a = 200;
+// $b = &$a;
+// $a = 100;
+
+// echo $b; // 100
+
+
+
+
+
+// Replace ? With Arithmetic Operators
+// echo 10 ? 20 ? 15 ? 3 ? 190 ? 10 ? 400; // 0
+
+
+
+$a = "10";
+// echo gettype(+$a);
+// echo +$a;
+// echo "<br>";
+
+// echo gettype(-$a);
+// echo - (-$a);
+// echo "<br>";
+
+
+// echo gettype((int)$a);
+// echo (int)$a;
+// echo "<br>";
+
+// echo gettype(intval($a));
+// echo (int)$a;
+// echo "<br>";
+
+echo gettype(($a + 0));
+echo $a + 0;
+echo "<br>";
+
+
+
+// echo $a;
+
+
+
+
+
+
+// For The People Who Love Searching
+// 10
+// "integer"
+// 10
+// "integer"

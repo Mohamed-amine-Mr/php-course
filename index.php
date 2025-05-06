@@ -1,31 +1,31 @@
 <?php
 
-/*
-    Demonstrating Variable Variables in PHP
-    A variable variable allows you to use the value of a variable as the name of another variable.
-*/
+  /*
+    Operators
+    - Used To Perform Operations On Values.
 
-// Assign the string "med" to the variable $a
-$a = "med";
+    Arithmetic Operators
+    - Used To Do Arithmetical Operations &#038; Conversion
 
-// Create a variable with the name stored in $a (i.e., $med) and assign it the value "amine"
-$$a = "amine";
-
-// Create another variable using the value of $med (i.e., $amine) and assign it the value "Moun"
-$ $$a = "Moun";
-
-// Output the value of $a, which is "med"
-echo $a;
+    - $a [+]  $b => Addition
+    - $a [-]  $b => Subtraction
+    - $a [*]  $b => Multiplication
+    - $a [/]  $b => Division
+    - $a [%]  $b => Modulus
+    - $a [**] $b => Exponentiation
+    - +$a        => Identity
+    - -$a        => Negation
+  */;
+// i can do watch using %
 echo "<br>";
+// echo (21 % 10); // remove 1 to become 20
+echo "<br><br><br>";
+// echo (18 % 10); //remvoe  8 so wen devision by 10  
 
-// Output the value of $med, which is "amine"
-// This works because $$a is equivalent to $med
-echo $amine;
-echo "<br>";
 
-// Output a string concatenated with the value of $med (which is "amine")
-echo "last name is ", $amine;
-echo "<br>";
-echo "Hello ${$a}"; // $$a
-echo "<br>";
-echo "Hello ${$$a}"; // $$$a
+// echo gettype(+"100"); // change to integer
+echo "<br><br><br>";
+// echo gettype(-100);
+echo "<br><br><br>";
+
+echo -"-100"; // 100 
