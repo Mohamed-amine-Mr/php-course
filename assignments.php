@@ -1,62 +1,30 @@
 <?php
-// $a = "Elzero";
-// $b = "Web";
-// $c = "School";
+$admins = ["Osama", "Ahmed", "Sayed"];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  if ($_POST["user"] == "Osama") {
+    echo  "This Username $admins[0] Is Admin";
+  } elseif ($_POST["user"] == "Ahmed") {
+    echo  "This Username $admins[1] Is Admin";
+  } elseif ($_POST["user"] == "Sayed") {
+    echo  "This Username $admins[2] Is Admin";
+  } else echo "The Request Method Is Post And Username Is {$_POST["user"]}";
+}
 
-// $a .= " " . $b;
-// $a .= " " . $c;
-// $d = $a;
-// Method One
-// $d = " $a $b $c ";
+?>
+<!DOCTYPE html>
+<html lang="en">
 
-// $d = " {$a} {$b} {$c} ";
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
-// $d =  $a . " " . $b . " " . $c;
+<body>
+  <form action="" method="POST">
+    <input type="text" name="user">
+    <input type="submit" value="Send">
+  </form>
+</body>
 
-
-// Method Two
-// $d = ???;
-
-// Method Three
-// $d = ???;
-
-// Method Four
-// $d = ???;
-
-// echo $d; // Elzero Web School
-
-
-// $a = 10;
-// $b = 20;
-
-// echo $a ? $b ? $a ? $b ? $a ? $a ? $a; // 10000
-
-
-// Code 1
-// $a = @$b or die("variable not exist");
-
-// Code 2
-// $f = @file("Not_A_File") or die("file not exist");
-
-// Code 3
-// (@include("Not_A_File")) or die("file not exist");;
-
-
-/*
-  Check That:
-  Variable "b" Larger Than Variable "a"
-  Variable "a" Identical To Variable "c"
-  Variable "a" Plus Variable "c" Identical To Variable "b"
-*/
-// Code 1
-// $a = @$b or die ( "b now exist");
-
-// Code 2
-// $f = @file("Not_A_File") or die("wrong file name");
-
-// Code 3
-echo DEFAULT_INCLUDE_PATH;
-if (1 > 2) echo "hi";
-elseif(2<5)echo "no";
-echo "hi";
-else "hi";
+</html>

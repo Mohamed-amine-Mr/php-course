@@ -20,53 +20,50 @@
 
 // Advanced Example: Redirect based on selected language
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  // Check the 'lang' value submitted via the form
-  if ($_POST["lang"] === "arabic") {
-    // Redirect to Arabic page
-    header("Location: ar.php");
-    exit(); // Stop script execution after redirect
-  } elseif ($_POST["lang"] === "english") {
-    // Redirect to English page
-    header("Location: en.php");
-    exit(); // Ensure no further code runs
-  } elseif ($_POST["lang"] === "spanish") {
-    // Redirect to Spanish page
-    header("Location: sp.php");
-    exit();
-  } else {
-    // Redirect to error page for invalid/empty language (e.g., "chelha")
-    header("Location: errLaguage.php");
-    exit();
-  }
+    // Check the 'lang' value submitted via the form
+    if ($_POST["lang"] === "arabic") {
+        // Redirect to Arabic page
+        header("Location: ar.php");
+        exit(); // Stop script execution after redirect
+    } elseif ($_POST["lang"] === "english") {
+        // Redirect to English page
+        header("Location: en.php");
+        exit(); // Ensure no further code runs
+    } elseif ($_POST["lang"] === "spanish") {
+        // Redirect to Spanish page
+        header("Location: sp.php");
+        exit();
+    } else {
+        // Redirect to error page for invalid/empty language (e.g., "chelha")
+        header("Location: errLaguage.php");
+        exit();
+    }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Set character encoding to UTF-8 for proper text display -->
-  <meta charset="UTF-8">
-  <!-- Ensure responsive design for mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support</title>
+    <!-- Set character encoding to UTF-8 for proper text display -->
+    <meta charset="UTF-8">
+    <!-- Ensure responsive design for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
 </head>
-
 <body>
-  <!-- Form to collect username and language, submits as POST request -->
-  <form method="POST">
-    <!-- Text input for user's full name -->
-    <input type="text" name="username" placeholder="full name">
-    <!-- Dropdown for selecting language -->
-    <select name="lang">
-      <option value="arabic">Arabic</option>
-      <option value="english">English</option>
-      <option value="spanish">Spanish</option>
-      <option value="">chelha</option> <!-- Empty value for "chelha" -->
-    </select>
-    <!-- Submit button to send form data -->
-    <input type="submit" value="Send">
-  </form>
+    <!-- Form to collect username and language, submits as POST request -->
+    <form method="POST">
+        <!-- Text input for user's full name -->
+        <input type="text" name="username" placeholder="full name">
+        <!-- Dropdown for selecting language -->
+        <select name="lang">
+            <option value="arabic">Arabic</option>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="">chelha</option> <!-- Empty value for "chelha" -->
+        </select>
+        <!-- Submit button to send form data -->
+        <input type="submit" value="Send">
+    </form>
 </body>
-
 </html>
