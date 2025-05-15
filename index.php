@@ -5,7 +5,7 @@
 <!-- lets use  : and endif , bach code more readble -->
 
 <?php if (10 > 11) : ?>
-
+  <!-- 
   <!DOCTYPE html>
   <html lang="en">
 
@@ -19,12 +19,11 @@
     <p>display content page</p>
   </body>
 
-  </html>
+  </html> -->
 
 <?php elseif (10 > 9): echo "second condition mesage"; ?>
 
-<?php else : ?>
-  <!DOCTYPE html>
+  <!-- <!DOCTYPE html>
   <html lang="en">
 
   <head>
@@ -44,15 +43,12 @@
 
 
 <?php
-if (10 > 10) :
-  echo "first";
-elseif (10 > 51):
-  echo "second";
-else : echo "last";
-endif;
-?>
-=======
-<?php
+// if (10 > 10) :
+//   echo "first";
+// elseif (10 > 51):
+//   echo "second";
+// else : echo "last";
+// endif;
 
 // function greeting($name, $gender = "")
 // {
