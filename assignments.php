@@ -179,6 +179,15 @@
 // 4
 
 
+
+
+
+// $countries = ["EG", "SA", "QA", "SY", "USA", "GER"];
+// foreach ($countries as $country) {
+//   if ($country == "USA") continue;
+//   echo "<br> $country";
+// }
+
 // $mix = [1, 2, "A", "B", "C", 3, 4];
 
 // foreach ($mix as $value) {
@@ -200,3 +209,117 @@ foreach ($countries as $country) {
   if ($country == "USA") continue;
   echo "<br> $country";
 }
+// $nums = [1, 13, 12, 20, 51, 17, 30];
+// foreach ($nums as $num) {
+//   if ($num  % 2 == 0) {
+//     echo (($num / 2) . "<br>");
+//   };
+// }
+// Output
+// 6
+// 10
+// 15
+
+// ?
+
+// $help_num = 3;
+// $nums = [4, 5, 6, 1, 2, 3];
+// $names = ["Ahmed", "Sayed", "Osama", "Mahmoud", "Gamal"];
+
+// for ($i = $help_num; $i <= 10; $i++) {
+//   echo $names[$i] . " <br>";
+// }
+
+// Output
+// "Sayed"
+// "Osama"
+
+
+// $money = ["Ahmed" => 100, "Sayed" => 150, "Osama" => 100, "Maher" => 250];
+// foreach ($money as $key => $value) {
+//   echo "The Name Is $key And I Need $value Pound From Him <br><br>";
+// }
+// Output
+// "The Name Is Ahmed And I Need 100 Pound From Him"
+// "The Name Is Sayed And I Need 150 Pound From Him"
+// "The Name Is Osama And I Need 100 Pound From Him"
+// "The Name Is Maher And I Need 250 Pound From Him"
+
+// $start = 0;
+// $mix = [1, 2, 3, "A", "B", "C", 4];
+
+// for ($i = 2; $i <= 4; $i++) {
+//   echo $i . "<br>";
+// }
+// Output
+// 2
+// 3
+// 4
+
+// $help_num = 3;
+// $nums = [4, 5, 6, 1, 2, 3];
+// $names = ["Ahmed", "Sayed", "Osama", "Mahmoud", "Gamal"];
+
+
+// for ($i = $help_num / $help_num; $i <= $help_num - ($help_num / 3); $i++) {
+//   echo $names[$i] . "<br>";
+// }
+// Output
+// "Sayed"
+// "Osama"
+
+
+// قم بإنشاء Function تقوم بجمع كل الأرقام التي تعطى لها ك Arguments
+
+// function sum_all()
+// {
+//     $result = 0;
+//     foreach (func_get_args() as $number) {
+//         if ($number == 5)  continue;
+//         if ($number == 10)  $number = 20;
+//         $result += $number;
+//     };
+//     echo "$result <br>";
+// }
+
+
+// sum_all(10, 12, 5, 6, 6, 10); // 64
+// echo sum_all(5, 10, 5, 10); // 40
+
+// function get_arguments()
+// {
+//     $concat = "";
+//     foreach (func_get_args() as $word) {
+//         $concat .= $word . " ";
+//     };
+//     return $concat;
+// }
+// Write Function Content Here
+
+// Needed Output
+// echo get_arguments("Hello", "Elzero", "Web", "School"); // Hello Elzero Web School
+// echo get_arguments("I", "Love", "PHP"); // I Love PHP
+
+
+
+
+
+
+
+function multiply()
+{
+    $result = 1;
+    foreach (func_get_args() as $number) {
+        if (gettype($number) == "string")    continue;
+
+        $result *= (int)$number;
+    }
+    return   $result . "<br>";
+}
+
+// Write Function Content Here
+
+// Needed Output
+echo multiply(10, 20); // 200
+echo multiply("A", 10, 30); // 300
+echo multiply(100.5, 10, "B"); // 1000
