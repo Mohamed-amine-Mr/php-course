@@ -374,19 +374,28 @@
 //     }
 //   };
 // }
-function calculate($a, $b, $op = "none")
+function calculate($a = 0, $b = 0, $op = "none")
 {
-  $num1 = 0;
-  $num2 = 0;
+  $args = func_get_args();
+  $num1 = isset($args[0]) ? $args[0]  : null;
+  $num2 = isset($args[1]) ? $args[1] : null;
+  $operator = isset($args[2]) ? $args[2] : "none";
 
-  foreach (func_get_args() as $value) {
-  
-  };
+  if ($operator == "none" ||  $operator == "a") {
+    $a = $num1;
+    $b = $num2;
+    $op = $operator;
+    return $num1 + $num2;
+  } elseif ($operator == "s" || $operator == "subtract") {
+    return $num1 - $num2;
+  } elseif ($operator == "multiply" || $operator == "m") {
+    return $num1 * $num2;
+  }
 }
 // Needed Output
-// echo calculate(10, 20); // 30
+echo calculate(10); // 30
 // echo calculate(10, 20, "a"); // 30
 // echo calculate(10, 20, "s"); // -10
-echo calculate(10, 20, "subtract"); // -10
+// echo calculate(10, 20, "subtract"); // -10
 // echo calculate(10, 20, "multiply"); // 200
 // echo calculate(10, 20, "m"); // 200
