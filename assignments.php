@@ -324,31 +324,60 @@
 // echo multiply("A", 10, 30); // 300
 // echo multiply(100.5, 10, "B"); // 1000
 
-function check_status($a, $b, $c)
-{
+// function check_status($a, $b, $c)
+// {
 
-  $isAvailable = true;
-  if (gettype($a) == "string") $name = $a;
-  if (gettype($b) == "string") $name = $b;
-  if (gettype($c) == "string") $name = $c;
+//   $isAvailable = true;
+//   if (gettype($a) == "string") $name = $a;
+//   if (gettype($b) == "string") $name = $b;
+//   if (gettype($c) == "string") $name = $c;
 
-  if (gettype($a) == "integer") $age = $a;
-  if (gettype($b) == "integer") $age = $b;
-  if (gettype($c) == "integer") $age = $c;
+//   if (gettype($a) == "integer") $age = $a;
+//   if (gettype($b) == "integer") $age = $b;
+//   if (gettype($c) == "integer") $age = $c;
 
-  if (gettype($a) == "boolean") $isAvailable = $a;
-  if (gettype($b) == "boolean") $isAvailable = $b;
-  if (gettype($c) == "boolean") $isAvailable = $c;
+//   if (gettype($a) == "boolean") $isAvailable = $a;
+//   if (gettype($b) == "boolean") $isAvailable = $b;
+//   if (gettype($c) == "boolean") $isAvailable = $c;
 
-  if ($isAvailable == true) $isAvailable = "You Are Available";
-  elseif ($isAvailable == false) {
-    $isAvailable = " You Are Not Available";
-  }
-  return  "Hello $name, Your Age Is $age,  $isAvailable For Hire <br><br>";
-}
+//   if ($isAvailable == true) $isAvailable = "You Are Available";
+//   elseif ($isAvailable == false) {
+//     $isAvailable = " You Are Not Available";
+//   }
+//   return  "Hello $name, Your Age Is $age,  $isAvailable For Hire <br><br>";
+// }
 
 // Needed Output
-echo check_status("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-echo check_status(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-echo check_status(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-echo check_status(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+// echo check_status("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// echo check_status(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// echo check_status(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// echo check_status(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+
+
+function calculate($a, $b, $op = "none")
+{
+
+  if (
+    gettype($a) == "integer"
+    &&
+    gettype($b) == "integer"
+    &&
+    gettype($op) == "string"
+  ) {
+    if ($op == "none" || $op == "a") {
+      return $a + $b;
+    } elseif ($op == "s" || $op == "subtract") {
+      return $a - $b;
+    } elseif ($op == "multiply" || $op == "m") {
+      return $a * $b;
+    }
+  };
+}
+// Needed Output
+// echo calculate(10, 20); // 30
+// echo calculate(10, 20, "a"); // 30
+// echo calculate(10, 20, "s"); // -10
+// echo calculate(10, 20, "subtract"); // -10
+// echo calculate(10, 20, "multiply"); // 200
+// echo calculate(10, 20, "m"); // 200
