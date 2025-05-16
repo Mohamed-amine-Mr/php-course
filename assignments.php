@@ -355,29 +355,38 @@
 
 
 
+// function calculate($a, $b, $op = "none")
+// {
+
+//   if (
+//     gettype($a) == "integer"
+//     &&
+//     gettype($b) == "integer"
+//     &&
+//     gettype($op) == "string"
+//   ) {
+//     if ($op == "none" || $op == "a") {
+//       return $a + $b;
+//     } elseif ($op == "s" || $op == "subtract") {
+//       return $a - $b;
+//     } elseif ($op == "multiply" || $op == "m") {
+//       return $a * $b;
+//     }
+//   };
+// }
 function calculate($a, $b, $op = "none")
 {
+  $num1 = 0;
+  $num2 = 0;
 
-  if (
-    gettype($a) == "integer"
-    &&
-    gettype($b) == "integer"
-    &&
-    gettype($op) == "string"
-  ) {
-    if ($op == "none" || $op == "a") {
-      return $a + $b;
-    } elseif ($op == "s" || $op == "subtract") {
-      return $a - $b;
-    } elseif ($op == "multiply" || $op == "m") {
-      return $a * $b;
-    }
+  foreach (func_get_args() as $value) {
+  
   };
 }
 // Needed Output
 // echo calculate(10, 20); // 30
 // echo calculate(10, 20, "a"); // 30
 // echo calculate(10, 20, "s"); // -10
-// echo calculate(10, 20, "subtract"); // -10
+echo calculate(10, 20, "subtract"); // -10
 // echo calculate(10, 20, "multiply"); // 200
 // echo calculate(10, 20, "m"); // 200
