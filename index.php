@@ -147,7 +147,7 @@ function calculate()
   $result = 0;
   // lets use it as arg in foreach because as we know , func_get_args()return an array 
   foreach (func_get_args() as $arg):
-    $result += $arg;
+    $result += $arg 
   endforeach;
   echo "result is " . $result;
 }

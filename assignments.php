@@ -204,11 +204,11 @@
 // "3 Letters Ignored"
 
 
-$countries = ["EG", "SA", "QA", "SY", "USA", "GER"];
-foreach ($countries as $country) {
-  if ($country == "USA") continue;
-  echo "<br> $country";
-}
+// $countries = ["EG", "SA", "QA", "SY", "USA", "GER"];
+// foreach ($countries as $country) {
+//   if ($country == "USA") continue;
+//   echo "<br> $country";
+// }
 // $nums = [1, 13, 12, 20, 51, 17, 30];
 // foreach ($nums as $num) {
 //   if ($num  % 2 == 0) {
@@ -306,20 +306,49 @@ foreach ($countries as $country) {
 
 
 
-function multiply()
-{
-    $result = 1;
-    foreach (func_get_args() as $number) {
-        if (gettype($number) == "string")    continue;
+// function multiply()
+// {
+//   $result = 1;
+//   foreach (func_get_args() as $number) {
+//     if (gettype($number) == "string")    continue;
 
-        $result *= (int)$number;
-    }
-    return   $result . "<br>";
-}
+//     $result *= (int)$number;
+//   }
+//   return   $result . "<br>";
+// }
 
 // Write Function Content Here
 
 // Needed Output
-echo multiply(10, 20); // 200
-echo multiply("A", 10, 30); // 300
-echo multiply(100.5, 10, "B"); // 1000
+// echo multiply(10, 20); // 200
+// echo multiply("A", 10, 30); // 300
+// echo multiply(100.5, 10, "B"); // 1000
+
+function check_status($a, $b, $c)
+{
+
+  $isAvailable = true;
+  if (gettype($a) == "string") $name = $a;
+  if (gettype($b) == "string") $name = $b;
+  if (gettype($c) == "string") $name = $c;
+
+  if (gettype($a) == "integer") $age = $a;
+  if (gettype($b) == "integer") $age = $b;
+  if (gettype($c) == "integer") $age = $c;
+
+  if (gettype($a) == "boolean") $isAvailable = $a;
+  if (gettype($b) == "boolean") $isAvailable = $b;
+  if (gettype($c) == "boolean") $isAvailable = $c;
+
+  if ($isAvailable == true) $isAvailable = "You Are Available";
+  elseif ($isAvailable == false) {
+    $isAvailable = " You Are Not Available";
+  }
+  return  "Hello $name, Your Age Is $age,  $isAvailable For Hire <br><br>";
+}
+
+// Needed Output
+echo check_status("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+echo check_status(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+echo check_status(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+echo check_status(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
