@@ -374,28 +374,77 @@
 //     }
 //   };
 // }
-function calculate($a = 0, $b = 0, $op = "none")
-{
-  $args = func_get_args();
-  $num1 = isset($args[0]) ? $args[0]  : null;
-  $num2 = isset($args[1]) ? $args[1] : null;
-  $operator = isset($args[2]) ? $args[2] : "none";
+// function calculate($a = 0, $b = 0, $op = "none")
+// {
+//   $args = func_get_args();
+//   $num1 = isset($args[0]) ? $args[0]  : null;
+//   $num2 = isset($args[1]) ? $args[1] : null;
+//   $operator = isset($args[2]) ? $args[2] : "none";
 
-  if ($operator == "none" ||  $operator == "a") {
-    $a = $num1;
-    $b = $num2;
-    $op = $operator;
-    return $num1 + $num2;
-  } elseif ($operator == "s" || $operator == "subtract") {
-    return $num1 - $num2;
-  } elseif ($operator == "multiply" || $operator == "m") {
-    return $num1 * $num2;
-  }
-}
+//   if ($operator == "none" ||  $operator == "a") {
+//     $a = $num1;
+//     $b = $num2;
+//     $op = $operator;
+//     return $num1 + $num2;
+//   } elseif ($operator == "s" || $operator == "subtract") {
+//     return $num1 - $num2;
+//   } elseif ($operator == "multiply" || $operator == "m") {
+//     return $num1 * $num2;
+//   }
+// }
+
 // Needed Output
-echo calculate(10); // 30
+// echo calculate(10, 20, "multiply"); // 30
 // echo calculate(10, 20, "a"); // 30
 // echo calculate(10, 20, "s"); // -10
 // echo calculate(10, 20, "subtract"); // -10
 // echo calculate(10, 20, "multiply"); // 200
 // echo calculate(10, 20, "m"); // 200
+
+
+// same exersic eusing switch 
+// ...$a when using ... it return array so u need to use foreach or loop , to make the condition u want for each value 
+
+// ?? not finished
+
+// function check_status(...$a)
+
+// {
+//   $name = "";
+//   $age = 0;
+//   $isAvailable = "";
+
+//   foreach ($a as $data) {
+//     if (gettype($data) === "string") $name .= $data;
+//     if (gettype($data) === "integer") $age += $data;
+//     if (gettype($data) === "boolean") {
+
+//       if ($data == "true") {
+//         $isAvailable = " Available For Hire";
+
+//         $data  .= $isAvailable;
+//       } elseif ($data == "false") {
+//         $isAvailable =  "Not Available For Hire";
+//         $data  .= $isAvailable;
+//       };
+//     }
+//     // i should use . if its string because i want concatinet , but i think we can concatinat string using + 
+//   };
+//   return "Hello $name, Your age Is $age, You Are $isAvailable";
+// };
+
+// echo check_status("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// echo check_status(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// echo check_status(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// echo check_status(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+
+function numbers(...$a)
+{
+  echo "number of arguments : " . func_num_args() . "<br>";
+  echo "argument Index number 3 is : " . func_get_arg(3) . "<br>";
+  echo "<pre>";
+  print_r(func_get_args());
+  "</pre>";
+}
+numbers(1, 99, 41, 99, 41, 99, 4);
