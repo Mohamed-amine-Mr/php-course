@@ -451,5 +451,13 @@ function calculate(...$nums)
   //   $result += $args;
   // }
   // return $result;
+
+  // instead of using func_get_args to get the array of value
+  // print_r(func_get_args());
+
+  // lets use spread
+  echo "<pre>";
+  print_r($nums);
+  echo "</pre>";
 }
 echo calculate(1, 99, 4);
