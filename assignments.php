@@ -459,5 +459,10 @@ function calculate(...$nums)
   echo "<pre>";
   print_r($nums);
   echo "</pre>";
+  $result = 0;
+  foreach ($nums as $num) {
+    $result += $num;
+  }
+  return $result;
 }
 echo calculate(1, 99, 4);
