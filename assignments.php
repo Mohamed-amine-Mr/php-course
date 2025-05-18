@@ -439,12 +439,17 @@
 // echo check_status(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
 
 
-function numbers(...$a)
+function numbers()
 {
-  echo "number of arguments : " . func_num_args() . "<br>";
-  echo "argument Index number 3 is : " . func_get_arg(3) . "<br>";
+  // echo "number of arguments : " . func_num_args() . "<br>";
+  // echo "argument Index number 3 is : " . func_get_arg(3) . "<br>";
   echo "<pre>";
-  print_r(func_get_args());
-  "</pre>";
+  // print_r(func_get_args());
+  echo "</pre>";
+  $result = 0;
+  foreach (func_get_args() as $args) {
+    $result += $args;
+  }
+  return $result;
 }
-numbers(1, 99, 41, 99, 41, 99, 4);
+echo numbers(1, 99, 4);
