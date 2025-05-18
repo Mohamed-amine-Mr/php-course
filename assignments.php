@@ -402,45 +402,11 @@
 // echo calculate(10, 20, "m"); // 200
 
 
-// same exersic eusing switch 
+// same exercise using switch 
 // ...$a when using ... it return array so u need to use foreach or loop , to make the condition u want for each value 
 
-// ?? not finished
-
-// function check_status(...$a)
-
+// function calculate(...$nums)
 // {
-//   $name = "";
-//   $age = 0;
-//   $isAvailable = "";
-
-//   foreach ($a as $data) {
-//     if (gettype($data) === "string") $name .= $data;
-//     if (gettype($data) === "integer") $age += $data;
-//     if (gettype($data) === "boolean") {
-
-//       if ($data == "true") {
-//         $isAvailable = " Available For Hire";
-
-//         $data  .= $isAvailable;
-//       } elseif ($data == "false") {
-//         $isAvailable =  "Not Available For Hire";
-//         $data  .= $isAvailable;
-//       };
-//     }
-//     // i should use . if its string because i want concatinet , but i think we can concatinat string using + 
-//   };
-//   return "Hello $name, Your age Is $age, You Are $isAvailable";
-// };
-
-// echo check_status("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-// echo check_status(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-// echo check_status(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-// echo check_status(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
-
-
-function calculate(...$nums)
-{
   // echo "number of arguments : " . func_num_args() . "<br>";
   // echo "argument Index number 3 is : " . func_get_arg(3) . "<br>";
   // echo "<pre>";
@@ -456,13 +422,21 @@ function calculate(...$nums)
   // print_r(func_get_args());
 
   // lets use spread
-  echo "<pre>";
-  print_r($nums);
-  echo "</pre>";
-  $result = 0;
-  foreach ($nums as $num) {
-    $result += $num;
-  }
-  return $result;
-}
-echo calculate(1, 99, 4);
+
+//   echo "<pre>";
+//   print_r($nums);
+//   echo "</pre>";
+
+//   $result = 0;
+//   foreach ($nums as $num) {
+
+//     $result += $num;
+//   }
+//   echo "argument Index number 3 is : " . $nums[3] . "<br>";
+
+//   return $result;
+// }
+// echo calculate(1, 99, 4, 40);
+
+
+// ////// Function Training And Unpacking Arguments
