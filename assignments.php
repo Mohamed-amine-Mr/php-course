@@ -510,6 +510,13 @@ function one()
 
 // echo one();
 
-$func1 = "one";
+// $func1 = "one";
 
-echo $func1();// this same as echo one();
+// echo $func1(); // this same as echo one();
+
+function say_hello_to($someone)
+{
+  return "Hello $someone";
+}
+$func2 = "say_hello_to";
+echo $func2("amine");
