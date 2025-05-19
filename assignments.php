@@ -440,17 +440,58 @@
 
 
 // ////// Function Training And Unpacking Arguments
-// you cnan add splat at first , because it will take all arguments , best way to add it in the end 
+// you can't add splat at first , because it will take all arguments , best way to add it in the end 
+// function get_data(
+//   $name,
+//   $country = "Private",
+//   ...$skills
+// ) {
+//   echo "Hello $name your Country is $country  <br>";
+//   // lets loop over the splat , as we know it return array
+//   foreach ($skills as $index  => $skill) {
+//     echo "skill number " . $index + 1 . " is : 
+//     -- $skill <br>";
+//   }
+// }
+// get_data("med", "morroco", "HTML", "CSS", "JS");
+
 function get_data(
-  $name,
-  $country = "Private",
-  ...$skills
+  $name,                    // Required parameter for the name
+  $country = "Private",     // Optional parameter with a default value
+  ...$skills                // Variadic parameter: gathers any additional arguments into an array
 ) {
-  echo "Hello $name your Country is $country  <br>";
-  // lets loop over the splat , as we know it return array
-  foreach ($skills as $index  => $skill) {
-    echo "skill number " . $index + 1 . " is : 
-    -- $skill <br>";
+  // Predefined array of skills
+  $group_of_skills = ["HTML", "CSS", "JS"];
+
+  // Uncomment the lines below to debug the collected skills
+  // echo "<pre>";
+  // print_r($skills);
+  // echo "<br>Hello $name, your Country is $country <br>";
+
+  // Loop through the predefined skills array and print each skill with its number
+  foreach ($group_of_skills as $i => $skill) {
+    echo "Skill number " . ($i + 1) . " is: $skill <br>";
   }
 }
-get_data("med", "morroco", "HTML", "CSS", "JS");
+
+// Call the function with a name, a country, and an unpacked array of skills
+get_data(
+  "mohamed",           // First argument: name
+  "morocco",           // Second argument: country
+  ...["HTML", "CSS", "JS"] // Unpacking the array into individual arguments using the splat operator
+);
+
+/**
+ * 🔍 Explanation of the Splat Operator (...)
+ *
+ * In the function definition: `...$skills` packs all extra arguments into an array.
+ * In the function call: `...$array` unpacks an array into individual arguments.
+ *
+ * So instead of:
+ *    get_data("mohamed", "morocco", "HTML", "CSS", "JS");
+ * You can write:
+ *    $group_of_skills = ["HTML", "CSS", "JS"];
+ *    get_data("mohamed", "morocco", ...$group_of_skills);
+ * 
+ * This makes the code more dynamic and reusable.
+ */
