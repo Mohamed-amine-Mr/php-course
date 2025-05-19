@@ -528,3 +528,9 @@ if (function_exists("testing")) {
 } else {
   echo "Function not found";
 }
+echo "<br>";
+
+// echo strlen("Amine");//5
+
+$strLength = "strlen";
+echo $strLength("med");//3
