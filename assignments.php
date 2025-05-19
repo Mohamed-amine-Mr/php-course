@@ -407,21 +407,21 @@
 
 // function calculate(...$nums)
 // {
-  // echo "number of arguments : " . func_num_args() . "<br>";
-  // echo "argument Index number 3 is : " . func_get_arg(3) . "<br>";
-  // echo "<pre>";
-  // print_r(func_get_args());
-  // echo "</pre>";
-  // $result = 0;
-  // foreach (func_get_args() as $args) {
-  //   $result += $args;
-  // }
-  // return $result;
+// echo "number of arguments : " . func_num_args() . "<br>";
+// echo "argument Index number 3 is : " . func_get_arg(3) . "<br>";
+// echo "<pre>";
+// print_r(func_get_args());
+// echo "</pre>";
+// $result = 0;
+// foreach (func_get_args() as $args) {
+//   $result += $args;
+// }
+// return $result;
 
-  // instead of using func_get_args to get the array of value
-  // print_r(func_get_args());
+// instead of using func_get_args to get the array of value
+// print_r(func_get_args());
 
-  // lets use spread
+// lets use spread
 
 //   echo "<pre>";
 //   print_r($nums);
@@ -440,3 +440,17 @@
 
 
 // ////// Function Training And Unpacking Arguments
+// you cnan add splat at first , because it will take all arguments , best way to add it in the end 
+function get_data(
+  $name,
+  $country = "Private",
+  ...$skills
+) {
+  echo "Hello $name your Country is $country  <br>";
+  // lets loop over the splat , as we know it return array
+  foreach ($skills as $index  => $skill) {
+    echo "skill number " . $index + 1 . " is : 
+    -- $skill <br>";
+  }
+}
+get_data("med", "morroco", "HTML", "CSS", "JS");
