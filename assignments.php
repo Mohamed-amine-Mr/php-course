@@ -1,5 +1,6 @@
 <?php
 
+/////////////////////// Switch Statement Exercise ///////////////////////
 // $genre = "Hack And Slash";
 
 // switch ($genre) {
@@ -27,8 +28,7 @@
 // Needed Output
 // "I Recommend Castlevania Games";
 
-
-
+/////////////////////// Arithmetic Operations with Switch ///////////////////////
 // $num_one = 23;
 // $num_two = 5;
 // $op = "/";
@@ -54,9 +54,8 @@
 //     break;
 // }
 
-
+/////////////////////// Day Opening Hours Conditionals ///////////////////////
 // $day = "Wed";
-
 
 // if ($day == "Sat" || $day == "Sun" || $day == "Mon") {
 //   echo "We Are Open All The Day";
@@ -66,7 +65,7 @@
 //   echo "We Are Closed";
 // } else  echo "Unknown Day";
 
-
+/////////////////////// Switch with Multiple Conditions ///////////////////////
 // $name = "1";
 // $age = 40;
 // $country = "Egypt";
@@ -85,6 +84,7 @@
 // "The Name Is Good To Go"
 // "The Country Is Good To Go"
 
+/////////////////////// Countdown For Loop ///////////////////////
 // $index = 10;
 
 // for ($i = $index; $i >= 1; $i--) {
@@ -103,6 +103,7 @@
 // 2
 // 1
 
+/////////////////////// Even Numbers For Loop ///////////////////////
 // $index = 0;
 
 // for ($i = $idex; $i <= 20; $i += 2) {
@@ -112,19 +113,21 @@
 // 2
 // 4 ...
 
+/////////////////////// Even Numbers While Loop ///////////////////////
 // $i = $idex;
 // while ($i <= 20) {
 //   echo "<br> $i";;
 //   $i += 2;
 // }
 
+/////////////////////// Even Numbers Do While Loop ///////////////////////
 // $i = $idex;
 // do {
 //   echo "<br> $i";
 //   $i += 2;
 // } while ($i <= 20);
 
-
+/////////////////////// Custom Sequence While Loop ///////////////////////
 // $num = 2;
 
 // while ($num < 520) {
@@ -138,7 +141,7 @@
 // 10=> 4 + 6
 // 22 . ..  
 
-
+/////////////////////// Countdown with Leading Zeros ///////////////////////
 // $start = 10;
 // $end = 0;
 // $stop = 3;
@@ -153,7 +156,7 @@
 // 09
 // 08
 
-//  ??? 
+/////////////////////// Filtered Array Output ///////////////////////
 // $start = 0;
 // $mix = [1, 2, 3, "A", "B", "C", 4];
 
@@ -162,8 +165,7 @@
 // 3
 // 4
 
-// ////////////
-
+/////////////////////// Filtered Array Output with For Loop ///////////////////////
 // $start = 0;
 // $mix = [1, 2, 3, "A", "B", "C", 4];
 
@@ -178,16 +180,14 @@
 // 3
 // 4
 
-
-
-
-
+/////////////////////// Countries Array Foreach ///////////////////////
 // $countries = ["EG", "SA", "QA", "SY", "USA", "GER"];
 // foreach ($countries as $country) {
 //   if ($country == "USA") continue;
 //   echo "<br> $country";
 // }
 
+/////////////////////// Mixed Array Foreach ///////////////////////
 // $mix = [1, 2, "A", "B", "C", 3, 4];
 
 // foreach ($mix as $value) {
@@ -203,7 +203,7 @@
 // "4 Numbers Printed"
 // "3 Letters Ignored"
 
-
+/////////////////////// Even Numbers Division ///////////////////////
 // $countries = ["EG", "SA", "QA", "SY", "USA", "GER"];
 // foreach ($countries as $country) {
 //   if ($country == "USA") continue;
@@ -220,8 +220,7 @@
 // 10
 // 15
 
-// ?
-
+/////////////////////// Names Array For Loop ///////////////////////
 // $help_num = 3;
 // $nums = [4, 5, 6, 1, 2, 3];
 // $names = ["Ahmed", "Sayed", "Osama", "Mahmoud", "Gamal"];
@@ -234,7 +233,7 @@
 // "Sayed"
 // "Osama"
 
-
+/////////////////////// Money Associative Array ///////////////////////
 // $money = ["Ahmed" => 100, "Sayed" => 150, "Osama" => 100, "Maher" => 250];
 // foreach ($money as $key => $value) {
 //   echo "The Name Is $key And I Need $value Pound From Him <br><br>";
@@ -245,6 +244,7 @@
 // "The Name Is Osama And I Need 100 Pound From Him"
 // "The Name Is Maher And I Need 250 Pound From Him"
 
+/////////////////////// For Loop with Range ///////////////////////
 // $start = 0;
 // $mix = [1, 2, 3, "A", "B", "C", 4];
 
@@ -256,6 +256,7 @@
 // 3
 // 4
 
+/////////////////////// Names Array For Loop with Math ///////////////////////
 // $help_num = 3;
 // $nums = [4, 5, 6, 1, 2, 3];
 // $names = ["Ahmed", "Sayed", "Osama", "Mahmoud", "Gamal"];
@@ -268,9 +269,7 @@
 // "Sayed"
 // "Osama"
 
-
-// قم بإنشاء Function تقوم بجمع كل الأرقام التي تعطى لها ك Arguments
-
+/////////////////////// Sum All Function ///////////////////////
 // function sum_all()
 // {
 //     $result = 0;
@@ -286,6 +285,7 @@
 // sum_all(10, 12, 5, 6, 6, 10); // 64
 // echo sum_all(5, 10, 5, 10); // 40
 
+/////////////////////// Get Arguments Function ///////////////////////
 // function get_arguments()
 // {
 //     $concat = "";
@@ -300,12 +300,7 @@
 // echo get_arguments("Hello", "Elzero", "Web", "School"); // Hello Elzero Web School
 // echo get_arguments("I", "Love", "PHP"); // I Love PHP
 
-
-
-
-
-
-
+/////////////////////// Multiply Function ///////////////////////
 // function multiply()
 // {
 //   $result = 1;
@@ -324,6 +319,7 @@
 // echo multiply("A", 10, 30); // 300
 // echo multiply(100.5, 10, "B"); // 1000
 
+/////////////////////// Check Status Function ///////////////////////
 // function check_status($a, $b, $c)
 // {
 
@@ -353,8 +349,7 @@
 // echo check_status(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 // echo check_status(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
 
-
-
+/////////////////////// Calculate Function ///////////////////////
 // function calculate($a, $b, $op = "none")
 // {
 
@@ -401,10 +396,7 @@
 // echo calculate(10, 20, "multiply"); // 200
 // echo calculate(10, 20, "m"); // 200
 
-
-// same exercise using switch 
-// ...$a when using ... it return array so u need to use foreach or loop , to make the condition u want for each value 
-
+/////////////////////// Calculate Function with Switch ///////////////////////
 // function calculate(...$nums)
 // {
 // echo "number of arguments : " . func_num_args() . "<br>";
@@ -495,6 +487,8 @@
  * 
  * This makes the code more dynamic and reusable.
  */
+
+/////////////////////// Variable Function and function_exists ///////////////////////
 /*
     Function
     - Variable Function
@@ -503,10 +497,10 @@
     - Function Exists
     --- function_exists("Func Name")
   */
-function one()
-{
-  return "One From Function";
-}
+// function one()
+// {
+//   return "One From Function";
+// }
 
 // echo one();
 
@@ -514,23 +508,23 @@ function one()
 
 // echo $func1(); // this same as echo one();
 
-function say_hello_to($someone)
-{
-  return "Hello $someone";
-}
-$func2 = "say_hello_to";
+// function say_hello_to($someone)
+// {
+//   return "Hello $someone";
+// }
+// $func2 = "say_hello_to";
 
-echo $func2("amine");
-echo "<br>";
+// echo $func2("amine");
+// echo "<br>";
 
-if (function_exists("testing")) {
-  echo testing();
-} else {
-  echo "Function not found";
-}
-echo "<br>";
+// if (function_exists("testing")) {
+//   echo testing();
+// } else {
+//   echo "Function not found";
+// }
+// echo "<br>";
 
 // echo strlen("Amine");//5
 
-$strLength = "strlen";
-echo $strLength("med");//3
+// $strLength = "strlen";
+// echo $strLength("med");//3
