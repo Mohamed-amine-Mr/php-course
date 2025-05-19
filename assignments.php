@@ -528,3 +528,14 @@
 
 // $strLength = "strlen";
 // echo $strLength("med");//3
+
+/////////////  Passing Arguments By Reference And Return Type Declaration
+
+function add_five($number)
+{
+  $number += 5;
+  return $number;
+}
+$n = 15;
+
+echo add_five($n);
