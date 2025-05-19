@@ -455,31 +455,31 @@
 // }
 // get_data("med", "morroco", "HTML", "CSS", "JS");
 
-function get_data(
-  $name,                    // Required parameter for the name
-  $country = "Private",     // Optional parameter with a default value
-  ...$skills                // Variadic parameter: gathers any additional arguments into an array
-) {
-  // Predefined array of skills
-  $group_of_skills = ["HTML", "CSS", "JS"];
+// function get_data(
+//   $name,                    // Required parameter for the name
+//   $country = "Private",     // Optional parameter with a default value
+//   ...$skills                // Variadic parameter: gathers any additional arguments into an array
+// ) {
+// Predefined array of skills
+// $group_of_skills = ["HTML", "CSS", "JS"];
 
-  // Uncomment the lines below to debug the collected skills
-  // echo "<pre>";
-  // print_r($skills);
-  // echo "<br>Hello $name, your Country is $country <br>";
+// Uncomment the lines below to debug the collected skills
+// echo "<pre>";
+// print_r($skills);
+// echo "<br>Hello $name, your Country is $country <br>";
 
-  // Loop through the predefined skills array and print each skill with its number
-  foreach ($group_of_skills as $i => $skill) {
-    echo "Skill number " . ($i + 1) . " is: $skill <br>";
-  }
-}
+// Loop through the predefined skills array and print each skill with its number
+//   foreach ($group_of_skills as $i => $skill) {
+//     echo "Skill number " . ($i + 1) . " is: $skill <br>";
+//   }
+// }
 
 // Call the function with a name, a country, and an unpacked array of skills
-get_data(
-  "mohamed",           // First argument: name
-  "morocco",           // Second argument: country
-  ...["HTML", "CSS", "JS"] // Unpacking the array into individual arguments using the splat operator
-);
+// get_data(
+//   "mohamed",           // First argument: name
+//   "morocco",           // Second argument: country
+//   ...["HTML", "CSS", "JS"] // Unpacking the array into individual arguments using the splat operator
+// );
 
 /**
  * 🔍 Explanation of the Splat Operator (...)
@@ -495,3 +495,17 @@ get_data(
  * 
  * This makes the code more dynamic and reusable.
  */
+/*
+    Function
+    - Variable Function
+    --- PHP Allow To Use Variable Like Function
+    --- When You Append Parentheses () To Variable PHP Will Look For Function With That Name
+    - Function Exists
+    --- function_exists("Func Name")
+  */
+function one()
+{
+  return "One From Function";
+}
+
+echo one();
