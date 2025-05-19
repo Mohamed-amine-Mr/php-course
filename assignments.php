@@ -508,4 +508,8 @@ function one()
   return "One From Function";
 }
 
-echo one();
+// echo one();
+
+$func1 = "one";
+
+echo $func1();// this same as echo one();
