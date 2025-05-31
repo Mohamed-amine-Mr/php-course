@@ -529,13 +529,102 @@
 // $strLength = "strlen";
 // echo $strLength("med");//3
 
-/////////////  Passing Arguments By Reference And Return Type Declaration
+///////////// ////
+/*
+    Function
+    - Passing Arguments by Reference
+    --- By Default, Function Arguments Are Passed By Value
+    --- If The Value Of The Argument Inside The Function Changed It Will Not Change Outside
+    --- To Change It Outside Pass The Argument By Reference
 
-function add_five($number)
-{
-  $number += 5;
-  return $number;
-}
-$n = 15;
+    - Return Type Declarations
 
-echo add_five($n);
+    Search
+    - PHP Strict Mode
+  */
+// function add_five($number)
+// {
+//   $number += 5;
+//   return $number;
+// }
+// $n = 15;
+
+// echo add_five($n) . "<br>"; //20
+
+// echo $n;//15
+// why 15 not 20 ? because : By Default, Function Arguments Are Passed By Value
+
+// to change it outside pass argument by reference : 
+
+// function add_five(&$numTwo)
+// {
+//   return  $numTwo += 5;
+//   // $num = $num + 5 this will change the $num even outside the function because when we use (&arg) it change it everywhere not lik normal 
+// }
+// $num = 5;
+
+// echo add_five($num) . "<br>";
+
+// echo $num; // 5 before adding & behind (Arg)
+// after adding  & before the argument in the function
+// echo $num;// 10 
+
+// echo '<pre>';
+// print_r(["A", "B", 100 => "C",  "D", "E", 3 => "F", "h", "I", 200 => "G", "K", 105 => "L", "M", "N", 106 => "K", "Y", "Z"]); //DUMA katkemel ela biggest last value , as we know array by default start from zero , ila 3tina l index 3 , 100 f index dyalo , l value li men baad , 100 atkon 101 , 102 ... , even ila bghuty trje3ha l smaller value , 3tinni matalan 5=>"x", bghuty tkhroj mn 100ers liderty u can't , radi tchof 5 liderty liha add bohdha , after it aykml fin wsal f hundreds
+// // print_r([
+// //   0 => "Ahmed",
+// //   1 => "Bochaib",
+// //   "mahmoud",
+// //   false => "sayed", // false = 0 , so key 0 will overide the value from Ahmed to ANA sayed
+// //   10 => "Amura",
+// //   "gharub", #11 kaykemel mn last index
+// //   8 => "med", // madaroch lfo9 9bel 10 ya3ni madarch sorting 
+// //   "medo", //12,
+// //   "names" => [
+// //     "osama",
+// //     "karim"
+// //     => ["1", "2"]
+// //   ]
+
+// // ]);
+// echo '</pre>';
+
+
+// // Write Function Content Here
+// function multiply(...$a)
+// //  masach i its just a value katbeda mn 0 oktb9a tzad , its not not value inside the array 
+// {
+//   $result = 1;
+//   for ($i = 0; $i < count($a); $i++) {
+//     if (is_numeric($a[$i])) {
+//       // return $result =  $a[$i] * $a[$i + 1]; but this same as using two arg in function , if there third arg will not multiply 
+//       $result *= $a[$i];
+//     } elseif ((gettype($a[$i])) <> "integer") $result;
+//   }
+//   return $result;
+// }
+// Needed Output
+// echo multiply(10, 20); // 200
+// echo multiply("A", 10, 30); // 300
+// echo multiply(100.5, 10, "B"); // 1000
+
+///////////// ////
+
+
+// function multiply(...$nums)
+// {
+//   $result = 1;
+//   foreach ($nums as $num) {
+//     if (gettype($num) == "string") continue;
+//     if (is_float($num)) ((int)$num);
+
+//     $result *= (int)$num;
+//   }
+//   return $result;
+// }
+// Write Function Content Here
+
+// Needed Output
+// echo multiply(10, 20); // 200
+// echo multiply("A", 10, 30); // 300
+// echo multiply(100.5, 10, "B"); // 1000

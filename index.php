@@ -138,17 +138,22 @@
     Spread Syntax In JS
   */
 
-function calculate()
-{
-  // echo "number of Arguments : " . func_num_args() . "<br>";
-  // echo "Arguments before 3 : " . func_get_arg(3) . "<br>";
-  print_r(func_get_args());
-  //lets add the items to each other
-  $result = 0;
-  // lets use it as arg in foreach because as we know , func_get_args()return an array 
-  foreach (func_get_args() as $arg):
-    $result += $arg;
-  endforeach;
-  echo "result is " . $result;
-}
-echo calculate(10, 20, 30, 40);
+// function calculate()
+// {
+//   // echo "number of Arguments : " . func_num_args() . "<br>";
+//   // echo "Arguments before 3 : " . func_get_arg(3) . "<br>";
+//   print_r(func_get_args());
+//   //lets add the items to each other
+//   $result = 0;
+//   // lets use it as arg in foreach because as we know , func_get_args()return an array 
+//   foreach (func_get_args() as $arg):
+//     $result += $arg;
+//   endforeach;
+//   echo "result is " . $result;
+// }
+// echo calculate(10, 20, 30, 40);
+
+
+/////////////
+
+// Write Function Content Here
