@@ -628,3 +628,24 @@
 // echo multiply(10, 20); // 200
 // echo multiply("A", 10, 30); // 300
 // echo multiply(100.5, 10, "B"); // 1000
+// Write Function Content Here
+
+
+function sum_all(...$args)
+{
+  $results = 0;
+  foreach ($args as $arg) {
+    if ($arg == 5) {
+      continue;
+    } elseif ($arg == 10) {
+      $arg = 20;
+    }
+    $results += $arg;
+  }
+  return $results;
+}
+// Write Function Content Here
+
+// Needed Output
+// echo sum_all(10, 12, 5, 6, 6, 10); // 64
+echo sum_all(5, 10, 5, 10); // 40
