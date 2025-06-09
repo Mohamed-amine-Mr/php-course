@@ -631,21 +631,104 @@
 // Write Function Content Here
 
 
-function sum_all(...$args)
-{
-  $results = 0;
-  foreach ($args as $arg) {
-    if ($arg == 5) {
-      continue;
-    } elseif ($arg == 10) {
-      $arg = 20;
-    }
-    $results += $arg;
-  }
-  return $results;
-}
+// function sum_all(...$args)
+// {
+//   $results = 0;
+//   foreach ($args as $arg) {
+//     if ($arg == 5) {
+//       continue;
+//     } elseif ($arg == 10) {
+//       $arg = 20;
+//     }
+//     $results += $arg;
+//   }
+//   return $results;
+// }
 // Write Function Content Here
 
 // Needed Output
 // echo sum_all(10, 12, 5, 6, 6, 10); // 64
-echo sum_all(5, 10, 5, 10); // 40
+// echo sum_all(5, 10, 5, 10); // 40
+
+// Write Function Content Here
+
+
+// function check_status($a, $b, $c)
+// {
+//   $name = "";
+//   $age = 0;
+//   $isAvailable = true;
+//   $availble = "";
+
+//   if (gettype($a) == "string") $name = $a;
+//   if (gettype($a) == "integer") $age = $a;
+//   if (gettype($a) == "boolean") $isAvailable = $a;
+
+//   if (gettype($b) == "string")   $name  = $b;
+//   if (gettype($b) == "integer")  $age = $b;
+//   if (gettype($b) == "boolean")  $isAvailable = $b;
+
+//   if (gettype($c) == "string")  $name = $c;
+//   if (gettype($c) == "integer")    $age  = $c;
+//   if (gettype($c) == "boolean")  $isAvailable = $c;
+
+//   if ($isAvailable == true) {
+//     $availble = "You Are Available For Hire";
+//   } else {
+//     $availble = "You Are Not Available For Hire";
+//   };
+
+//   return "Hello $name, Your Age Is $age,$availble";
+// }
+
+// // Needed Output
+// // echo check_status("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// // echo check_status(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// echo check_status(true, 21, "Amine"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// // echo check_status(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+
+
+/////////////////////////////
+
+// function calculate($num1, $num2, $operator = "none")
+// {
+//   while (true) {
+
+//     $results = 0;
+//     if ($operator == "a" || $operator == "none") {
+//       $results = $num1 + $num2;
+//       break;
+//     }
+//     if ($operator == "s" || $operator == "subtract") {
+//       $results = $num1 - $num2;
+//       break;
+//     }
+//     if ($operator == "m" || $operator == "multiply") {
+//       $results = $num1 * $num2;
+//       break;
+//     }
+//   }
+//   return $results;
+// }
+// }
+// Write Function Content Here
+
+// Needed Output
+// echo calculate(10, 20); // 30
+// echo calculate(10, 20, "a"); // 30
+// echo calculate(10, 20, "s"); // -10
+// echo calculate(10, 20, "subtract"); // -10
+// echo calculate(10, 20, "multiply"); // 200
+// echo calculate(10, 20, "m"); // 200
+
+/////////////////////////////
+
+
+function calculate(int $num_one, int $num_two)
+{
+  return $num_one + (float)$num_two;
+}
+
+echo calculate(20, 10); // 30
+echo gettype(calculate(20, 10)); // Double
