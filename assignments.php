@@ -725,10 +725,22 @@
 /////////////////////////////
 
 
-function calculate(int $num_one, int $num_two)
-{
-  return $num_one + (float)$num_two;
-}
+// function calculate(int $num_one, int $num_two)
+// {
+//   return $num_one + (float)$num_two;
+// }
 
-echo calculate(20, 10); // 30
-echo gettype(calculate(20, 10)); // Double
+// echo calculate(20, 10); // 30
+// echo gettype(calculate(20, 10)); // Double
+
+/////////////////////////////
+
+
+//  we need this result without using $Hello variable// Hello Osama
+$message = "Hello";
+
+$$message = function ($item) use ($message) {
+  return "$message $item";
+};
+
+echo $Hello("Osama"); // Hello Osama
