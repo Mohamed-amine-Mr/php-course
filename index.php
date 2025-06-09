@@ -41,8 +41,11 @@ echo "</pre>";
 
 echo "<br><br><br>";
 
+// we use Anonymous Function to add 10 
+$nums_After_adding_ten = array_map(function ($item) {
+  $item + 10;
+}, $nums);
 
-$nums_After_adding_ten = array_map(("add_five"), $nums);
 echo "<pre>";
 print_r($nums_After_adding_ten);
 echo "</pre>";
