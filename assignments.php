@@ -751,6 +751,7 @@
 
 
 // Write Function Content Here
+$greet = fn($item) => "Hello $item";
 
 // Needed Output
 echo $greet("Osama"); // Greetings
