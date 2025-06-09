@@ -737,10 +737,20 @@
 
 
 //  we need this result without using $Hello variable// Hello Osama
-$message = "Hello";
+// $message = "Hello";
 
-$$message = function ($item) use ($message) {
-  return "$message $item";
-};
+// $$message = function ($item) use ($message) {
+//   return "$message $item";
+// };
 
-echo $Hello("Osama"); // Hello Osama
+// echo $Hello("Osama"); // Hello Osama
+
+
+
+/////////////////////////////
+
+
+// Write Function Content Here
+
+// Needed Output
+echo $greet("Osama"); // Greetings

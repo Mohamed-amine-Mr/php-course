@@ -89,5 +89,24 @@
 
   // echo $say_hello_to("Osama");
 
-  $say_hola = fn() => "Hola";
-  echo $say_hola();
+  // $say_hola = fn() => "Hola";
+  // echo $say_hola();  
+
+
+  // $say_hola = fn($someone) => "Hola $someone";
+
+  // echo $say_hola("Osama");
+  echo "<br>";
+  // we don't need to use use lik in the anynomyse function , when we use arrow function we dont need to use use to call the outside variable in the scope 
+
+  $msg = "Hi";
+
+  // $say_hi = function ($someone) use ($msg) {
+  //   return "$msg $someone";
+  // };
+  // echo $say_hi("amine");
+  // 
+
+  $say_hi = fn($someone) => "$msg $someone";
+
+  echo $say_hi("taki");
